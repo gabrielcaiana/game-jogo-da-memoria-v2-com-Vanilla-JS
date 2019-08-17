@@ -21,6 +21,7 @@
         margin: auto;
         display: flex;
         flex-wrap: wrap;
+        perspective: 1000px;
     }
     
     .cartas {
@@ -31,6 +32,7 @@
         box-shadow: 1 px 1 px 1 px rgba ( 0, 0, 0, 0, 3);
         transform-style: preserve-3d;
         transform: scale(1);
+        transition: transform .5s;
     }
     
     .cartas.flip {
@@ -50,4 +52,9 @@
         position: absolute;
         border-radius: 5px;
         background: #a29bfe;
+        backface-visibility: hidden;
+    }
+    
+    .front {
+        transform: rotateY(180deg);
     }
